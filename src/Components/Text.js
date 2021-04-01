@@ -20,4 +20,4 @@ const textComponent=function(props){
     );
     }
 
-    {/*Definir los mensaje y los autores en state*/}
+    {/*Definir los mensajes y los autores en state*/}
