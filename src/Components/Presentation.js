@@ -1,6 +1,11 @@
+import React from 'react'
+import LayoutComponent from "./LayoutComponent";
 
-const Presentation=function(){
+export default function Presentation(){
+    return(
+
+      <LayoutComponent/>  
+   
+    )
+}
   
-} 
-  
-{/*Unir toda esta broma y que compile como es*/}

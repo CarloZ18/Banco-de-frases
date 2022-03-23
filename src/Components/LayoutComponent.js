@@ -1,9 +1,22 @@
-const layoutComponent = function() {
+import React from 'react';
+import styled from 'styled-components';
+import Text from './Text';
+
+const LayoutStyle=styled.div`
+background-color:white;
+ border-radius:1%;
+padding: 5vh;
+width:50%;
+margin:250px auto; 
+ box-shadow: 3px 3px 20px black; 
+;`
+
+ 
+function LayoutComponent() {
   
     return (
-      <div id="quote-box" ><textComponent/> <actionComponent/></div>
-    );
-  
-    } 
 
-    {/*Darle la personalizacion grafica a todo*/}
+      <LayoutStyle id='quote-box' ><Text/></LayoutStyle> 
+    );
+    } 
+export default LayoutComponent
