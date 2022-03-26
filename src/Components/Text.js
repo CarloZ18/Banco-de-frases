@@ -35,7 +35,7 @@ margin-right:auto;
 text-align:center;
 font-family: 'Courier New', Courier, monospace;
 @media screen and (max-width:600px) {
-    font-size: 25px;
+    font-size: 20px;
 }
 ` 
 
@@ -61,6 +61,10 @@ height:40px;
 cursor: pointer;
 :hover{
   box-shadow: 0px 3px 5px gray;
+  @media screen and (max-width: 600px) {
+      width: 70px;
+      font-size: 12px;
+    }
 }
 `
 
