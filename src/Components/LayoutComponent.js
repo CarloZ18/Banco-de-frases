@@ -18,7 +18,6 @@ margin:250px auto;
 function LayoutComponent() {
   
     return (
-
       <LayoutStyle id='quote-box' ><Text/></LayoutStyle> 
     );
     } 
