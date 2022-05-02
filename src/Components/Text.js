@@ -17,27 +17,15 @@ const messages=[{frase:'La desobediencia aleja la presencia de Dios de nuestras 
   {frase:'Puede que Dios no te llame a construir un arca, pero si te llama a cumplir su voluntad.',autor:'Charles Stanley'},
     {frase:'A menudo las dificultades preparan a la gente ordinaria para un destino extraordinario',autor:'Charles Stanley'},
   {frase:'Ser varón no es ser hombre. No medís a un hombre por los músculos sino por la fibra moral. Si llegas al éxito sacrificando tu hogar, no sos hombre.',autor:'Dante Gebel'}
-] 
+]
 
-const colors=[ '#16a085',
-'#27ae60',
-'#2c3e50',
-'#f39c12',
-'#e74c3c',
-'#9b59b6',
-'#FB6964',
-'#342224',
-'#472E32',
-'#BDBB99',
-'#77B1A9',
-'#73A857']
+const colors=[ '#16a085','#27ae60','#2c3e50','#f39c12','#e74c3c','#9b59b6','#FB6964','#342224','#472E32','#BDBB99','#77B1A9','#73A857']
 
  export default function TextComponent () {
   
   const [text, setText]=useState(0)
   const [color, setColor]=useState(0)
 
- 
   const TextStyle=styled.h1`
 font-size:30px;
 color:${colors[color]};
@@ -45,9 +33,6 @@ margin-left:auto;
 margin-right:auto;
 text-align:center;
 font-family: 'Courier New', Courier, monospace;
-@media screen and (max-width:600px) {
-    font-size: 20px;
-}
 ` 
 
 const AuthorStyle = styled.p`
@@ -57,9 +42,7 @@ text-align:right;
 margin-left:auto;
 margin-right:auto;
 font-family:'Arial', Courier, monospace;
-@media screen and (max-width:600px) {
-  font-size: 10px;  
-}
+
 `
 
 const ActionStyle=styled.button`
@@ -72,10 +55,6 @@ height:40px;
 cursor: pointer;
 :hover{
   box-shadow: 0px 3px 5px gray;
-  @media screen and (max-width: 600px) {
-      width: 70px;
-      font-size: 12px;
-    }
 }
 `
 

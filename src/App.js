@@ -1,5 +1,4 @@
-
-import Presentation from './Components/Presentation';
+import LayoutComponent from './Components/LayoutComponent'
 import './index.css'
 
 
@@ -7,9 +6,7 @@ import './index.css'
   
 export default function App() {
   return (
-
- <Presentation  />
-         
+    <LayoutComponent/>       
   );
 }
 
