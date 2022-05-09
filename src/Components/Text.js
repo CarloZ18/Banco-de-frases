@@ -7,26 +7,26 @@ import Swal from "sweetalert2";
 import $ from 'jquery'
   
 const messages=[{frase:'La desobediencia aleja la presencia de Dios de nuestras vidas.',autor:'Juan Carlos Harrigan'},
-    {frase:'Si tu deseas su presencia su presencia te desea a ti.',autor:'Juan Carlos Harrigan'},
-    {frase:'Cada prueba representa un espacio de tiempo en donde podemos madurar en la presencia de Dios.',autor:'Juan Carlos Harrigan'},
-    {frase:'No es que Dios te dejo solo; el sigue contigo, pero ahora quiere que lo conozcas de una manera diferente.',autor:'Yesenia Then'},
-    {frase:'Cuando un mal pensamiento llega a ti, siempre busca anclarse en las cosas que no has superado todavia',autor:'Yesenia Then'},
-    {frase:'La grandeza de la vida en Dios, no esta en pedir milagros; sino en ser un milagro para otros.',autor:'Yesenia Then'},
-  {frase:'La señal de una genuina obra de Dios en tu vida es que empiezas a odiar el pecado que antes amabas y amar la justicia que antes ignorabas.',autor:'Paul Washer'},
-    {frase:'Un lider es aquel que conoce el camino, anda en el camino y muestra el camino.',autor:'Jhon Maxwell'},
-  {frase:'Puede que Dios no te llame a construir un arca, pero si te llama a cumplir su voluntad.',autor:'Charles Stanley'},
-    {frase:'A menudo las dificultades preparan a la gente ordinaria para un destino extraordinario',autor:'Charles Stanley'},
-  {frase:'Ser varón no es ser hombre. No medís a un hombre por los músculos sino por la fibra moral. Si llegas al éxito sacrificando tu hogar, no sos hombre.',autor:'Dante Gebel'}
+{frase:'Si tu deseas su presencia su presencia te desea a ti.',autor:'Juan Carlos Harrigan'},
+{frase:'Cada prueba representa un espacio de tiempo en donde podemos madurar en la presencia de Dios.',autor:'Juan Carlos Harrigan'},
+{frase:'No es que Dios te dejo solo; el sigue contigo, pero ahora quiere que lo conozcas de una manera diferente.',autor:'Yesenia Then'},
+{frase:'Cuando un mal pensamiento llega a ti, siempre busca anclarse en las cosas que no has superado todavia',autor:'Yesenia Then'},
+{frase:'La grandeza de la vida en Dios, no esta en pedir milagros; sino en ser un milagro para otros.',autor:'Yesenia Then'},
+{frase:'La señal de una genuina obra de Dios en tu vida es que empiezas a odiar el pecado que antes amabas y amar la justicia que antes ignorabas.',autor:'Paul Washer'},
+{frase:'Un lider es aquel que conoce el camino, anda en el camino y muestra el camino.',autor:'Jhon Maxwell'},
+{frase:'Puede que Dios no te llame a construir un arca, pero si te llama a cumplir su voluntad.',autor:'Charles Stanley'},
+{frase:'A menudo las dificultades preparan a la gente ordinaria para un destino extraordinario',autor:'Charles Stanley'},
+{frase:'Ser varón no es ser hombre. No medís a un hombre por los músculos sino por la fibra moral. Si llegas al éxito sacrificando tu hogar, no sos hombre.',autor:'Dante Gebel'}
 ]
 
 const colors=[ '#16a085','#27ae60','#2c3e50','#f39c12','#e74c3c','#9b59b6','#FB6964','#342224','#472E32','#BDBB99','#77B1A9','#73A857']
 
  export default function TextComponent () {
   
-  const [text, setText]=useState(0)
-  const [color, setColor]=useState(0)
+const [text, setText]=useState(0)
+const [color, setColor]=useState(0)
 
-  const TextStyle=styled.h1`
+const TextStyle=styled.h1`
 font-size:30px;
 color:${colors[color]};
 margin-left:auto;
@@ -72,9 +72,9 @@ cursor: pointer;
 `
 
 const ContainerStyle=styled.div`
- display: flex;
-  flex-direction: row;
-  justify-content:space-between
+display: flex;
+flex-direction: row;
+justify-content:space-between
 ;`
 
 const frases=messages.map(messages => <div><FontAwesomeIcon icon={faQuoteLeft}  style={{marginRight:'10px'}}/>{messages.frase}</div>);
@@ -97,7 +97,6 @@ $('.quote-author').animate({ opacity: 0 }, 500, function () {
 
  var randomColor=Math.floor(Math.random() * colors.length)
 setColor(randomColor)
-
 }
 
 function nuevoQuote(){
@@ -119,6 +118,7 @@ return(
 <style>
  {"body {background-color:"+colors[color]+";}"};
 </style>
+
 <div className='quote-text'>
 <TextStyle id='text' > {frases[text]}</TextStyle>
 </div>
@@ -128,18 +128,17 @@ return(
 </div>        
 
 <ContainerStyle  >
-        <a id="tweet-quote" target="_blank" rel="noreferrer" href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22Dream%20big%20and%20dare%20to%20fail.%22%20Norman%20Vaughan"><TwitterStyle id="twitter"  className="btn btn-default  ">
-     <FontAwesomeIcon icon={faTwitter}/>
+  <a id="tweet-quote" target="_blank" rel="noreferrer" href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22Dream%20big%20and%20dare%20to%20fail.%22%20Norman%20Vaughan">
+    <TwitterStyle id="twitter"  className="btn btn-default  ">
+      <FontAwesomeIcon icon={faTwitter}/>
     </TwitterStyle>
- </a>
+  </a>
  {/*Boton de cambio*/}
 
-   <ActionStyle id="new-quote"  onClick={nuevoQuoteAnimado}><strong>Nueva frase</strong> </ActionStyle> 
+  <ActionStyle id="new-quote"  onClick={nuevoQuoteAnimado}><strong>Nueva frase</strong></ActionStyle> 
     
 </ContainerStyle>
-
     </>      
-
     );
 }; 
 
