@@ -1,19 +1,20 @@
 import styled from 'styled-components';
-import {colors} from './Data-and-styles/Database' 
-import {color} from '../Text'
+import {colors} from './database'; 
+
 
 /*STYLE MESSAGE*/
 const TextStyle=styled.h1`
 font-size:30px;
-color:${colors[color]};
+color:${(props)=>colors[props.indexColor]};
 margin-left:auto;
 margin-right:auto;
 text-align:center;
 font-family: 'Courier New', Courier, monospace;
 ` 
+
 /*STYLE AUTHOR*/
 const AuthorStyle = styled.p`
-color:${colors[color]};
+color:${(props)=>colors[props.indexColor]};
 font-size:15px;
 text-align:right;
 margin-left:auto;
@@ -23,7 +24,7 @@ font-family:'Arial', Courier, monospace;
 `
 /*STYLE BUTTON NEW QUOTE*/
 const ActionStyle=styled.button`
-background-color:${colors[color]};
+background-color:${(props)=>colors[props.indexColor]};
 border:none;
 border-radius:5px;
 font-size: 15px;
@@ -36,7 +37,7 @@ cursor: pointer;
 `
 /*STYLE BUTTON TWITTER*/
 const TwitterStyle=styled.button`
-background-color:${colors[color]};
+background-color:${(props)=>colors[props.indexColor]};
 border-radius:5px;
 border:none;
 height: 40px;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Text from './Text';
+
 
 const LayoutStyle=styled.div`
 background-color:white;
@@ -13,12 +13,11 @@ box-shadow: 3px 3px 20px black;
 padding: 6vh;
 }  
 `
-
  
-function LayoutComponent() {
+function LayoutComponent({children}) {
   
     return (
-      <LayoutStyle id='quote-box' ><Text/></LayoutStyle> 
+      <LayoutStyle id='quote-box'>{children}</LayoutStyle> 
     );
     } 
 export default LayoutComponent
