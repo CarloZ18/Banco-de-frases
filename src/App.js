@@ -11,31 +11,22 @@ export default function App() {
   const [indexColor, setIndexColor] = useState(0);
 
   function nuevoQuoteAnimado() {
-    function nuevoQuote() {
-      if (indexText === messages.length - 1) {
-        Swal.fire({
-          title: "¡Felicidades!",
-          text: "Has culminado las frases diarias",
-          icon: "success",
-        });
-        setIndexText(0);
-      } else {
-        setIndexText(indexText + 1);
-      }
-    }
-
     if (indexText === messages.length - 1) {
-      $("#text").text(nuevoQuote);
-      $("#author").text(nuevoQuote);
+      Swal.fire(
+        "¡Felicidades!",
+        "Has culminado las frases diarias",
+        "success"
+      );
+      setIndexText(0);
     } else {
       $(".quote-text").animate({ opacity: 0 }, 500, function () {
         $(this).animate({ opacity: 1 }, 500);
-        $("#text").text(nuevoQuote);
+        setIndexText(indexText + 1);
       });
 
       $(".quote-author").animate({ opacity: 0 }, 500, function () {
         $(this).animate({ opacity: 1 }, 500);
-        $("#author").text(nuevoQuote);
+        setIndexText(indexText + 1);
       });
 
       var randomColor = Math.floor(Math.random() * colors.length);
